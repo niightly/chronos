@@ -1,0 +1,14 @@
+install: true
+sudo: required
+group: bluezone
+language: ruby
+rvm:
+    - 2.5.3
+branches:
+ only:
+   - master
+services:
+    - mongodb
+    - redis-server
+script:
+  - ./config/scripts/build/pull_request.sh
