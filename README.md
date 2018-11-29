@@ -1,4 +1,4 @@
-# Project: Chronos &nbsp; &nbsp; ![Test Coverage](https://github.ibm.com/niightly/chronos/blob/master/lib/assets/simplecov.svg)
+# Project: Chronos &nbsp; &nbsp; ![Test Coverage](https://github.com/niightly/chronos/blob/master/lib/assets/simplecov.svg)
 
 
 
