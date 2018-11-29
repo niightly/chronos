@@ -8,7 +8,8 @@ class Space
 	field :phones, type: Array, default: []
 	field :address, type: String
 
-	validates_presence_of :name, :email, :cnes
+	validates_presence_of :name, :email, :cnes, :address
 	validates :name, uniqueness: { scope: %i[name cnes] }
+
 	validates_with SpaceValidator
 end

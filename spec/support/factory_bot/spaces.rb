@@ -2,7 +2,8 @@ FactoryBot.define do
  factory :space, class: Space do
   name { Faker::Company.unique.name }
   email { Faker::Internet.unique.email }
-  cnes { Faker::Number.unique.number(7) }
+  cnes { Faker::Number.number(7) }
+  address { Faker::Address.unique.street_name }
   phones do
    Faker::Config.locale = 'pt-BR'
 
