@@ -65,7 +65,7 @@ class SimpleCov::Formatter::Shield
 		url << apply_custom_color unless common_colors[:enabled]
 		url << apply_style
 
-		URI.encode(url)
+		URI.encode_www_form_component(url)
 	end
 
 	def apply_style
@@ -93,12 +93,14 @@ class SimpleCov::Formatter::Shield
 
 	def fetch_key
 		return '?' if common_colors[:enabled]
+
 		'&'
 	end
 
 	def define_quality
 		return :high if covered_percent.between?(coverage[:high], 100)
 		return :medium if covered_percent.between?(coverage[:medium], coverage[:high])
+
 		:low
 	end
 

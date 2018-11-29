@@ -1,0 +1,59 @@
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - 'bin/**/**'
+    - 'node_modules/**/**'
+    - 'spec/support/schemas/**'
+    - 'spec/fixtures/**'
+
+Documentation:
+  Enabled: false
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+  AllowInnerSlashes: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  EnforcedStyle: assign_inside_condition
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 1
+
+Layout/Tab:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Width: 1
+
+Layout/AlignHash:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Metrics/LineLength:
+  Max: 500
+
+Metrics/BlockLength:
+  CountComments: false  # count full line comments?
+  Max: 50
+  ExcludedMethods: []
+  Exclude:
+    - 'spec/**/**'
+    - '**/*.jbuilder'
+
+Metrics/MethodLength:
+  Max: 150
+
+Metrics/AbcSize:
+    Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false

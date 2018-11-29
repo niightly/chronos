@@ -14,7 +14,7 @@ class SpaceValidator < ActiveModel::Validator
 	def duplicated_phone?(entry, list)
 		return false unless list.count > 1 && entry.present?
 
-		duplicated = list.select{ |item| item == entry }
-		return duplicated.count >= 2
+		duplicated = list.select { |item| item == entry }
+		duplicated.count >= 2
 	end
 end

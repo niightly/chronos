@@ -1,78 +1,78 @@
 module SimpleCovFormatterShieldSchema
-	def self.schema
-		{
-			type: 'object',
-			required: %w[label decimals style coverage common_colors custom_color colors],
+  def self.schema
+    {
+      type: 'object',
+      required: %w[label decimals style coverage common_colors custom_color colors],
 
-			properties: {
-				label: {
-					type: 'object',
-					required: %w[value],
+      properties: {
+        label: {
+          type: 'object',
+          required: %w[value],
 
-					properties: {
-						value: { type: 'string' }
-					}
-				},
-				decimals: {
-					type: 'object',
-					required: %w[value],
+          properties: {
+            value: { type: 'string' }
+          }
+        },
+        decimals: {
+          type: 'object',
+          required: %w[value],
 
-					properties: {
-						value: { type: 'number' }
-					}
-				},
-				style: {
-					type: 'object',
-					required: %w[value],
+          properties: {
+            value: { type: 'number' }
+          }
+        },
+        style: {
+          type: 'object',
+          required: %w[value],
 
-					properties: {
-						value: { type: 'string' }
-					}
-				},
-				coverage: {
-					type: 'object',
-					required: %w[high medium low],
+          properties: {
+            value: { type: 'string' }
+          }
+        },
+        coverage: {
+          type: 'object',
+          required: %w[high medium low],
 
-					properties: {
-						high: { type: 'number' },
-						medium: { type: 'number' },
-						low: { type: 'number' }
-					}
-				},
-				common_colors: {
-					type: 'object',
-					required: %w[enabled],
+          properties: {
+            high: { type: 'number' },
+            medium: { type: 'number' },
+            low: { type: 'number' }
+          }
+        },
+        common_colors: {
+          type: 'object',
+          required: %w[enabled],
 
-					properties: {
-						enabled: { type: 'boolean' }
-					}
-				},
-				custom_color: {
-					type: 'object',
-					required: %w[high medium low],
+          properties: {
+            enabled: { type: 'boolean' }
+          }
+        },
+        custom_color: {
+          type: 'object',
+          required: %w[high medium low],
 
-					properties: {
-						high: { type: 'string' },
-						medium: { type: 'string' },
-						low: { type: 'string' }
-					}
-				},
-				colors: {
-					type: 'object',
-					required: %w[high medium low],
+          properties: {
+            high: { type: 'string' },
+            medium: { type: 'string' },
+            low: { type: 'string' }
+          }
+        },
+        colors: {
+          type: 'object',
+          required: %w[high medium low],
 
-					properties: {
-						high: { type: 'string' },
-						medium: { type: 'string' },
-						low: { type: 'string' }
-					}
-				}
-			}
-		}
-	end
+          properties: {
+            high: { type: 'string' },
+            medium: { type: 'string' },
+            low: { type: 'string' }
+          }
+        }
+      }
+    }
+  end
 
-	def self.sample
-		<<-EOS
+  def self.sample
+    <<-EOS
 		{
 			"label": { "value": "Coverage" },
 			"decimals": { "value": 2 },
@@ -95,5 +95,5 @@ module SimpleCovFormatterShieldSchema
 			},
 		}
 		EOS
-	end
+  end
 end

@@ -6,19 +6,19 @@ ruby '2.5.3'
 gem 'awesome_print', '~> 1.8'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bson_ext'
-gem 'jbuilder', '~> 2.8'
-gem 'mongoid', '~> 7.0.2'
-gem 'mongoid_rails_migrations', '~> 1.2'
-gem 'sinatra', '~> 2.0', '>= 2.0.4', require: nil
-gem 'sidekiq', '~> 5.2', '>= 5.2.3'
-gem 'sidekiq-scheduler', '~> 3.0'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'haml-rails', '~> 1.0'
 gem 'httparty', '~> 0.16.3'
+gem 'jbuilder', '~> 2.8'
 gem 'json-schema', '~> 2.8', '>= 2.8.1'
+gem 'mongoid', '~> 7.0.2'
+gem 'mongoid_rails_migrations', '~> 1.2'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1', '>= 5.2.1.1'
 gem 'sass-rails', '~> 5.0'
+gem 'sidekiq', '~> 5.2', '>= 5.2.3'
+gem 'sidekiq-scheduler', '~> 3.0'
+gem 'sinatra', '~> 2.0', '>= 2.0.4', require: nil
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
@@ -43,10 +43,10 @@ group :development do
 end
 
 group :test do
-	gem 'database_cleaner', '~> 1.7'
 	gem 'capybara', '>= 2.15'
-	gem 'selenium-webdriver'
 	gem 'chromedriver-helper'
+	gem 'database_cleaner', '~> 1.7'
+	gem 'selenium-webdriver'
 	gem 'simplecov', '~> 0.16.1'
 	gem 'simplecov-console', '~> 0.4.2'
 	gem 'webmock', '~> 3.4', '>= 3.4.2'
