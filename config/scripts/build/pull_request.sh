@@ -2,6 +2,9 @@
 YELLOW="\033[33;1m"
 set -e
 
+echo -e "\n${YELLOW}### Instaling dependencies";
+bundle install
+
 echo -e "\n${YELLOW}### Running linters";
 bundle exec rubocop
 bundle exec haml-lint app/views
