@@ -25,8 +25,8 @@ class SimpleCov::Formatter::Shield
 		},
 		common_colors: { enabled: false },
 		custom_color: {
-			high: '#28a745',
-			medium: '#FFEBA3',
+			high: '28a745',
+			medium: 'FFEBA3',
 			low: '#C65235'
 		},
 		colors: {
@@ -61,11 +61,10 @@ class SimpleCov::Formatter::Shield
 	end
 
 	def build_url
-		url = "#{CONST_URL}/#{label[:value]}-#{covered_percent}%-#{apply_common_color}.svg"
+		url = "#{CONST_URL}/#{label[:value].tr(' ', '_')}-#{covered_percent}%25-#{apply_common_color}.svg"
 		url << apply_custom_color unless common_colors[:enabled]
 		url << apply_style
-
-		URI.encode_www_form_component(url)
+		url
 	end
 
 	def apply_style
@@ -88,7 +87,7 @@ class SimpleCov::Formatter::Shield
 	end
 
 	def apply_custom_color
-		"?colorB=#{custom_color[define_quality]}"
+		"?colorB=%23#{custom_color[define_quality]}"
 	end
 
 	def fetch_key
