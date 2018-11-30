@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+I18n.reload!
+
 RSpec.describe Space, type: :model do
 	context 'presence' do
 		it 'is valid with valid attributes' do
@@ -17,21 +19,24 @@ RSpec.describe Space, type: :model do
 		it 'is not valid without a phones' do
 			expect(FactoryBot.build(:space, phones: [])).not_to be_valid
 		end
-		it 'is not valid without an address' do
-			expect(FactoryBot.build(:space, address: nil)).not_to be_valid
+		it 'is not valid without a street' do
+			expect(FactoryBot.build(:space, street: nil)).not_to be_valid
 		end
-
-		it 'is not valid without a postal_code'
-
-		it 'is not valid without a number'
-
-		it 'is not valid without a complement'
-
-		it 'is not valid without a neighborhood'
-
-		it 'is not valid without a city'
-
-		it 'is not valid without a state'
+		it 'is not valid without a number' do
+			expect(FactoryBot.build(:space, number: nil)).not_to be_valid
+		end
+		it 'is not valid without a postal_code' do
+			expect(FactoryBot.build(:space, postal_code: nil)).not_to be_valid
+		end
+		it 'is not valid without a neighborhood' do
+			expect(FactoryBot.build(:space, neighborhood: nil)).not_to be_valid
+		end
+		it 'is not valid without a city' do
+			expect(FactoryBot.build(:space, city: nil)).not_to be_valid
+		end
+		it 'is not valid without a state' do
+			expect(FactoryBot.build(:space, state: nil)).not_to be_valid
+		end
 	end
 
 	context 'duplication' do
@@ -51,7 +56,11 @@ RSpec.describe Space, type: :model do
 
 			expect(space).not_to be_valid
 		end
+		it 'is not valid 2 spaces with same address' do
+			space = FactoryBot.create(:space)
+			space2 = FactoryBot.build(:space, street: space.street, postal_code: space.postal_code, number: space.number, neighborhood: space.neighborhood, city: space.city, state: space.state)
 
-		it 'is not valid 2 spaces with same address'
+			expect(space2).not_to be_valid
+		end
 	end
 end

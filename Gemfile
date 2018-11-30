@@ -26,7 +26,6 @@ gem 'webpacker'
 group :development, :test do
 	gem 'byebug', platforms: %i[mri mingw x64_mingw]
 	gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1', require: false
-	gem 'faker', git: 'https://github.com/stympy/faker'
 	gem 'guard-rspec', '~> 4.7', '>= 4.7.3', require: false
 	gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
 	gem 'rubocop', '~> 0.60.0', require: false
@@ -43,6 +42,7 @@ group :development do
 end
 
 group :test do
+	gem 'faker', '~> 1.9', '>= 1.9.1'
 	gem 'capybara', '>= 2.15'
 	gem 'chromedriver-helper'
 	gem 'database_cleaner', '~> 1.7'
