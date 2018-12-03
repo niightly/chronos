@@ -35,3 +35,4 @@ coverage/**/*
 yarn-debug.log*
 .yarn-integrity
 .private.kdbx.lock
+dump.rdb
