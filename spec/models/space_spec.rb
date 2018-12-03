@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-I18n.reload!
-
 RSpec.describe Space, type: :model do
 	context 'presence' do
 		it 'is valid with valid attributes' do
@@ -39,7 +37,10 @@ RSpec.describe Space, type: :model do
 		end
 	end
 
-	context 'duplication' do
+	context 'uniqueness' do
+		it 'is valid with distinct phone numbers' do
+			expect(FactoryBot.build(:space, phones: %w[0143211234 01156781243])).to be_valid
+		end
 		it 'is not valid with same name under same cnes' do
 			FactoryBot.create(:space, name: 'SpaceA', cnes: 123_098_45)
 			space_b = FactoryBot.build(:space, name: 'SpaceA', cnes: 123_098_45)
@@ -55,6 +56,10 @@ RSpec.describe Space, type: :model do
 			space.phones << '01943218765'
 
 			expect(space).not_to be_valid
+		end
+		it 'is valid with distinct addresses' do
+			FactoryBot.create(:space)
+			expect(FactoryBot.build(:space)).to be_valid
 		end
 		it 'is not valid 2 spaces with same address' do
 			space = FactoryBot.create(:space)

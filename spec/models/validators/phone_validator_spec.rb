@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe SpaceValidator do
+RSpec.describe PhoneValidator do
 	describe '# validate' do
 		context 'valid document' do
 			subject { FactoryBot.build(:space) }

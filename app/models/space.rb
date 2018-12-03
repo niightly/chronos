@@ -21,5 +21,5 @@ class Space
 	validates :name, uniqueness: { scope: %i[name cnes] }
 	validates :street, uniqueness: { scope: %i[street number postal_code neighborhood city state] }
 
-	validates_with SpaceValidator
+	validates_with PhoneValidator
 end
