@@ -16,6 +16,8 @@ engines:
       - 'test/'
   rubocop:
     enabled: true
+  haml-lint:
+    enabled: true
   scss-lint:
     enabled: true
   shellcheck:
@@ -40,3 +42,4 @@ exclude_paths:
 - public/
 - vendor/
 - lib/simple_cov
+- app/assets/stylesheets/application.css
