@@ -17,6 +17,8 @@ class User
 	validates_with PhoneValidator
 	validates_uniqueness_of :email
 
+	belongs_to :address, class_name: 'Address'
+
 	private
 
 	def employee?

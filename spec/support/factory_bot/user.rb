@@ -10,5 +10,7 @@ FactoryBot.define do
 			entries = Array.new(Faker::Number.between(1, 3))
 			entries.map { Faker::PhoneNumber.unique.phone_number }
 		end
+
+		address { association(:address) }
 	end
 end

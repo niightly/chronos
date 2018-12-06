@@ -17,24 +17,6 @@ RSpec.describe Space, type: :model do
 		it 'is not valid without a phones' do
 			expect(FactoryBot.build(:space, phones: [])).not_to be_valid
 		end
-		it 'is not valid without a street' do
-			expect(FactoryBot.build(:space, street: nil)).not_to be_valid
-		end
-		it 'is not valid without a number' do
-			expect(FactoryBot.build(:space, number: nil)).not_to be_valid
-		end
-		it 'is not valid without a postal_code' do
-			expect(FactoryBot.build(:space, postal_code: nil)).not_to be_valid
-		end
-		it 'is not valid without a neighborhood' do
-			expect(FactoryBot.build(:space, neighborhood: nil)).not_to be_valid
-		end
-		it 'is not valid without a city' do
-			expect(FactoryBot.build(:space, city: nil)).not_to be_valid
-		end
-		it 'is not valid without a state' do
-			expect(FactoryBot.build(:space, state: nil)).not_to be_valid
-		end
 	end
 
 	context 'uniqueness' do
@@ -56,16 +38,6 @@ RSpec.describe Space, type: :model do
 			space.phones << '01943218765'
 
 			expect(space).not_to be_valid
-		end
-		it 'is valid with distinct addresses' do
-			FactoryBot.create(:space)
-			expect(FactoryBot.build(:space)).to be_valid
-		end
-		it 'is not valid 2 spaces with same address' do
-			space = FactoryBot.create(:space)
-			space2 = FactoryBot.build(:space, street: space.street, postal_code: space.postal_code, number: space.number, neighborhood: space.neighborhood, city: space.city, state: space.state)
-
-			expect(space2).not_to be_valid
 		end
 	end
 end
