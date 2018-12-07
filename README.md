@@ -1,5 +1,6 @@
-# Project: Chronos &nbsp; &nbsp; [![Build Status](https://img.shields.io/travis-ci/niightly/chronos.svg?style=for-the-badge)](https://travis-ci.org/niightly/chronos) ![Test Coverage](https://github.com/niightly/chronos/blob/master/lib/assets/simplecov.svg)
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/niightly/chronos.svg?style=for-the-badge)](https://codeclimate.com/github/niightly/chronos)
+[![Build Status](https://img.shields.io/travis-ci/niightly/chronos.svg?style=for-the-badge)](https://travis-ci.org/niightly/chronos)&nbsp;[![Code Climate maintainability](https://img.shields.io/codeclimate/coverage/niightly/chronos.svg?style=for-the-badge)](https://codeclimate.com/github/niightly/chronos)&nbsp;[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/niightly/chronos.svg?style=for-the-badge)](https://codeclimate.com/github/niightly/chronos)&nbsp;[![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/niightly/chronos.svg?style=for-the-badge)](https://codeclimate.com/github/niightly/chronos)
+
+# Project: Chronos
 
 # README
 
