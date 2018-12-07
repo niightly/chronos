@@ -12,5 +12,6 @@ FactoryBot.define do
 		end
 
 		address { association(:address) }
+		encrypted_password { Faker::Crypto.unique.sha256 }
 	end
 end

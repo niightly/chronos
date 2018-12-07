@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 gem 'awesome_print', '~> 1.8'
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bson_ext'
 gem 'haml', '~> 5.0', '>= 5.0.4'
