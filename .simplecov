@@ -4,8 +4,7 @@ require File.expand_path('../lib/simple_cov/formatter/shield', __FILE__)
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new [
 	SimpleCov::Formatter::HTMLFormatter,
-	SimpleCov::Formatter::Console,
-	SimpleCov::Formatter::Shield
+	SimpleCov::Formatter::Console
 ]
 
 SimpleCov.minimum_coverage 90
