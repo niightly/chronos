@@ -87,7 +87,7 @@ class SimpleCov::Formatter::Shield
 	end
 
 	def apply_custom_color
-		"?colorB=%23#{custom_color[define_quality]}"
+		# "?colorB=%23#{custom_color[define_quality]}"
 	end
 
 	def fetch_key
