@@ -8,8 +8,8 @@ bundle exec rubocop
 bundle exec haml-lint app/views
 
 echo -e "\n${YELLOW}### Step 2 - Auditing the code (vulnerabilities) ${RESET}"
-bundle exec bundle-audit --update
-bundle exec brakeman
+bundle exec bundle-audit --update --quiet
+bundle exec brakeman --quiet
 
 echo -e "\n${YELLOW}### Step 3 - Testing ${RESET}"
 bundle exec rspec
