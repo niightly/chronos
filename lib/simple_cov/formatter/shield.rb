@@ -23,7 +23,7 @@ class SimpleCov::Formatter::Shield
 			medium: 60,
 			low: 0
 		},
-		common_colors: { enabled: false },
+		common_colors: { enabled: true },
 		custom_color: {
 			high: '28a745',
 			medium: 'FFEBA3',
@@ -87,7 +87,7 @@ class SimpleCov::Formatter::Shield
 	end
 
 	def apply_custom_color
-		# "?colorB=%23#{custom_color[define_quality]}"
+		"?colorB=%23#{custom_color[define_quality]}"
 	end
 
 	def fetch_key
