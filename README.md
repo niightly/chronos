@@ -1,6 +1,4 @@
-# Project: Chronos &nbsp; &nbsp; ![Test Coverage](https://github.com/niightly/chronos/blob/master/lib/assets/simplecov.svg)
-
-
+# Project: Chronos &nbsp; &nbsp; [![Build Status](https://img.shields.io/travis-ci/niightly/chronos.svg?style=for-the-badge)](https://travis-ci.org/niightly/chronos) ![Test Coverage](https://github.com/niightly/chronos/blob/master/lib/assets/simplecov.svg)
 
 # README
 
